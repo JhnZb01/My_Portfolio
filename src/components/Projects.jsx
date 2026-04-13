@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, Eye, Filter } from 'lucide-react'
-
+import groceryImg from './project-img/grocery.jpg'
+import aiStoryImg from './project-img/ai-story.png'
+import weatherImg from './project-img/wheather.jpg'
+import socialMediaImg from './project-img/socialmedia.png'
+import portfolioImg from './project-img/portfolio.jpg'
+import restaurantImg from './project-img/restuarent.webp'
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all')
 
@@ -10,18 +15,18 @@ const Projects = () => {
       id: 1,
       title: 'Grocery Shop',
       description: 'A full-stack GroceryShop solution built with React, JS, and CSS. Features include user authentication, payment processing, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      image: groceryImg,
       technologies: ['React', 'JS', 'ReactRouter', 'CSS'],
       category: 'fullstack',
       liveUrl: '#',
-      githubUrl: 'https://github.com/JhnZb01/GroceryShop.git',
+      githubUrl: 'https://github.com/JhnZb01/Grocery_Shop.git',
       featured: true
     },
     {
       id: 2,
       title: 'AI Story Generator',
       description: 'A modern AI Story Generator application with drag-and-drop functionality, real-time updates, and team collaboration features.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      image: aiStoryImg,
       technologies: ['React', 'TypeScript', 'CSS', 'Vite'],
       category: 'frontend',
       liveUrl: '#',
@@ -32,7 +37,7 @@ const Projects = () => {
       id: 3,
       title: 'Weather Dashboard',
       description: 'A responsive weather application with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
+      image: weatherImg,
       technologies: ['JavaScript', 'API', 'Chart.js', 'CSS3'],
       category: 'frontend',
       liveUrl: '#',
@@ -43,7 +48,7 @@ const Projects = () => {
       id: 4,
       title: 'Social Media Dashboard',
       description: 'Analytics dashboard for social media management with data visualization, scheduling tools, and engagement metrics.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      image: socialMediaImg,
       technologies: ['React', 'D3.js', 'Express', 'PostgreSQL'],
       category: 'fullstack',
       liveUrl: '#',
@@ -54,22 +59,22 @@ const Projects = () => {
       id: 5,
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website showcasing projects and skills with smooth animations and glassmorphism design.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
+      image: portfolioImg,
       technologies: ['React', 'TailwindCSS', 'Framer Motion', 'Vite'],
       category: 'frontend',
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/JhnZb01/My_Portfolio.git',
       featured: false
     },
     {
       id: 6,
       title: 'Restaurant Booking System',
       description: 'Complete restaurant management system with table booking, menu management, and customer reviews.',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop',
+      image: restaurantImg,
       technologies: ['React', 'Node.js', 'MySQL', 'Socket.io'],
       category: 'fullstack',
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/JhnZb01/Restaurant_Booking_System.git',
       featured: false
     }
   ]
