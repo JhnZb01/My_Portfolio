@@ -49,10 +49,10 @@ const Projects = () => {
       title: 'Social Media Dashboard',
       description: 'Analytics dashboard for social media management with data visualization, scheduling tools, and engagement metrics.',
       image: socialMediaImg,
-      technologies: ['React', 'D3.js', 'Express', 'PostgreSQL'],
+      technologies: ['HTML', 'React', 'Tailwindcss', 'Vite'],
       category: 'fullstack',
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/JhnZb01/Social-Media-Dashboard.git',
       featured: false
     },
     {
@@ -71,13 +71,15 @@ const Projects = () => {
       title: 'Restaurant Booking System',
       description: 'Complete restaurant management system with table booking, menu management, and customer reviews.',
       image: restaurantImg,
-      technologies: ['React', 'Node.js', 'MySQL', 'Socket.io'],
+      technologies: ['React', 'TailwindCSS', 'Shadcn/UI', 'React Hook Form + Zod'],
       category: 'fullstack',
       liveUrl: '#',
       githubUrl: 'https://github.com/JhnZb01/Restaurant_Booking_System.git',
       featured: false
     }
   ]
+
+
 
   const filters = [
     { id: 'all', label: 'All Projects' },

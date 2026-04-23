@@ -28,9 +28,9 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center relative overflow-hidden" 
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center relative overflow-hidden" 
            style={{
-             backgroundImage: 'radial-gradient(circle at top right, rgba(14, 165, 233, 0.15), transparent 40%), radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.15), transparent 40%)'
+             backgroundImage: 'radial-gradient(circle at top right, rgba(14, 165, 233, 0.1), transparent 40%), radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.1), transparent 40%)'
            }}>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

@@ -58,19 +58,19 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="text-4xl sm:text-5xl font-bold font-display mb-6"
           >
             <span className="gradient-text">About Me</span>
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             variants={itemVariants}
             className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
           >
-            I'm a passionate front-end developer with a love for creating digital experiences 
-            that are both beautiful and functional. With expertise in modern web technologies, 
+            I'm a passionate front-end developer with a love for creating digital experiences
+            that are both beautiful and functional. With expertise in modern web technologies,
             I bring ideas to life through clean code and thoughtful design.
           </motion.p>
         </motion.div>
@@ -98,11 +98,11 @@ const About = () => {
                 >
                   <Icon size={28} className="text-white" />
                 </motion.div>
-                
+
                 <h3 className="text-xl font-bold mb-4 text-slate-200">
                   {feature.title}
                 </h3>
-                
+
                 <p className="text-slate-300 leading-relaxed">
                   {feature.description}
                 </p>
@@ -120,9 +120,9 @@ const About = () => {
           className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8"
         >
           {[
-            { number: '50+', label: 'Projects Completed' },
-            { number: '3+', label: 'Years Experience' },
-            { number: '100%', label: 'Client Satisfaction' }
+            { number: '10+', label: 'Projects Completed' },
+            { number: '1+', label: 'Years Experience' },
+            { number: '90%', label: 'Client Satisfaction' }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

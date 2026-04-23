@@ -11,7 +11,7 @@ const Footer = () => {
     {
       icon: Github,
       name: 'GitHub',
-      url: 'https://github.com/Jahanzaib555/code',
+      url: 'https://github.com/JhnZb01',
       color: 'hover:text-gray-900'
     },
     {
@@ -85,17 +85,21 @@ const Footer = () => {
             {/* Brand Section */}
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold">JZ</span>
+                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-500/30">
+                  <img 
+                    src="/portfolio.png" 
+                    alt="JZ" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <span className="text-2xl font-bold font-display">JAHAN ZAIB</span>
               </div>
-              
+
               <p className="text-slate-300 mb-6 leading-relaxed max-w-md">
-                Front-end developer passionate about creating beautiful, responsive, 
+                Front-end developer passionate about creating beautiful, responsive,
                 and user-friendly web experiences. Let's build something amazing together.
               </p>
-              
+
               {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => {
@@ -157,14 +161,14 @@ const Footer = () => {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row items-center justify-between"
             >
-              <motion.p 
+              <motion.p
                 variants={itemVariants}
                 className="text-slate-400 text-sm mb-4 sm:mb-0"
               >
                 © 2025 JAHAN ZAIB. All rights reserved.
               </motion.p>
-              
-              <motion.div 
+
+              <motion.div
                 variants={itemVariants}
                 className="flex items-center space-x-2 text-slate-400 text-sm"
               >

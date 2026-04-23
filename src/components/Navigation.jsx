@@ -46,8 +46,12 @@ const Navigation = ({ activeSection, onSectionChange }) => {
             className="flex items-center space-x-2 cursor-pointer"
             onClick={() => handleNavClick('home')}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">JZ</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-500/30 shadow-lg shadow-primary-500/20">
+              <img 
+                src="/portfolio.png" 
+                alt="JZ" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="font-display font-bold text-xl gradient-text hidden sm:block">
               JAHAN ZAIB

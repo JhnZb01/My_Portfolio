@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react'
+import { ChevronDown, Github, Linkedin, Twitter, Mail, Download } from 'lucide-react'
 
 const Hero = ({ onSectionChange }) => {
   const [currentText, setCurrentText] = useState('')
@@ -66,19 +66,56 @@ const Hero = ({ onSectionChange }) => {
         animate="visible"
         className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
       >
+        {/* Profile Image Section - Centered Above Name */}
+        <motion.div
+          variants={itemVariants}
+          className="flex justify-center mb-8"
+        >
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40">
+            {/* Animated Background Ring */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              className="absolute inset-[-6px] border border-dashed border-primary-500/40 rounded-full"
+            ></motion.div>
+            
+            {/* Main Image Container */}
+            <div className="relative w-full h-full rounded-full overflow-hidden p-1 bg-gradient-to-tr from-primary-500 to-accent-500 shadow-xl shadow-primary-500/20">
+              <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-slate-950">
+                <img
+                  src="/portfolio.png"
+                  alt="Jahan Zaib"
+                  className="w-full h-full object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-500 hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Main Content */}
         <motion.div variants={itemVariants} className="mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-5 py-2.5 mb-8 backdrop-blur-md"
+          >
+            <span className="text-xl inline-block origin-bottom-right hover:animate-ping">👋</span>
+            <span className="text-sm font-medium text-slate-300 uppercase tracking-widest hidden sm:inline-block">Hello, I am</span>
+            <span className="text-sm font-medium text-slate-300 uppercase tracking-widest sm:hidden">Hello</span>
+          </motion.div>
+
           <motion.h1
             className="text-5xl sm:text-6xl lg:text-7xl font-bold font-display mb-6"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
           >
-            <span className="gradient-text">JAHAN ZAIB</span>
+            <span className="gradient-text drop-shadow-[0_0_15px_rgba(14,165,233,0.3)]">JAHAN ZAIB</span>
           </motion.h1>
 
           <motion.div
-            className="text-xl sm:text-2xl lg:text-3xl text-slate-300 mb-8 h-16 flex items-center justify-center"
+            className="text-xl sm:text-2xl lg:text-3xl text-slate-300 mb-8 h-12 flex items-center justify-center"
             variants={itemVariants}
           >
             <span className="font-medium">
@@ -98,7 +135,7 @@ const Hero = ({ onSectionChange }) => {
             variants={itemVariants}
           >
             Passionate front-end developer crafting beautiful, responsive, and user-friendly web experiences.
-            Specialized in React, JavaScript, and modern CSS frameworks with a keen eye for design and performance.
+            Specializing in building exceptional digital experiences with modern web technologies.
           </motion.p>
         </motion.div>
 
@@ -134,30 +171,27 @@ const Hero = ({ onSectionChange }) => {
           </a>
           </motion.div>
 
-
-
-
-
-
-
           {/* Social Links */}
           <motion.div
             className="flex justify-center space-x-6 mb-16"
             variants={itemVariants}
           >
             {[
-              { icon: Github, href: '#', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
-              { icon: Mail, href: '#', label: 'Email' }
+              { icon: Github, href: 'https://github.com/JhnZb01', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://linkedin.com/in/zjahan', label: 'LinkedIn' },
+              { icon: Twitter, href: 'https://x.com/zb_jhno3432?s=21', label: 'Twitter' },
+              { icon: Mail, href: 'mailto:zjahan087@gmail.com', label: 'Email' }
             ].map((social, index) => {
               const Icon = social.icon
               return (
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -5 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-12 h-12 glass rounded-full flex items-center justify-center text-slate-300 hover:text-primary-400 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/20"
+                  className="w-12 h-12 glass rounded-full flex items-center justify-center text-slate-300 hover:text-primary-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:border-primary-500/30"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 + index * 0.2 }}
@@ -176,7 +210,7 @@ const Hero = ({ onSectionChange }) => {
             className="flex flex-col items-center"
           >
             <motion.button
-              onClick={scrollToProjects}
+              onClick={() => onSectionChange('projects')}
               whileHover={{ scale: 1.1 }}
               className="text-slate-400 hover:text-primary-400 transition-colors duration-300"
             >
