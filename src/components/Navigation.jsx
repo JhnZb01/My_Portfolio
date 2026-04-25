@@ -48,7 +48,7 @@ const Navigation = ({ activeSection, onSectionChange }) => {
           >
             <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-500/30 shadow-lg shadow-primary-500/20">
               <img 
-                src="/portfolio.png" 
+                src="./portfolio.png" 
                 alt="JZ" 
                 className="w-full h-full object-cover"
               />

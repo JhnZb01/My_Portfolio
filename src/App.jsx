@@ -24,6 +24,7 @@ function App() {
 
   const handleSectionChange = (section) => {
     setActiveSection(section)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   if (isLoading) {
@@ -50,7 +51,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full">
       <Navigation 
         activeSection={activeSection} 
         onSectionChange={handleSectionChange} 
@@ -121,7 +122,7 @@ function App() {
         </AnimatePresence>
       </main>
       
-      <Footer />
+      <Footer onSectionChange={handleSectionChange} />
     </div>
   )
 }

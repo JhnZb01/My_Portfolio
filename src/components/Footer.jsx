@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Heart, Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react'
 
-const Footer = () => {
+const Footer = ({ onSectionChange }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -35,11 +35,11 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', id: 'home' },
+    { name: 'About', id: 'home' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Contact', id: 'contact' }
   ]
 
   const containerVariants = {
@@ -87,7 +87,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-500/30">
                   <img 
-                    src="/portfolio.png" 
+                    src="./portfolio.png" 
                     alt="JZ" 
                     className="w-full h-full object-cover"
                   />
@@ -128,12 +128,15 @@ const Footer = () => {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
+                    <button
+                      onClick={() => {
+                        if (onSectionChange) onSectionChange(link.id);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
                       className="text-slate-300 hover:text-white transition-colors duration-300"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>

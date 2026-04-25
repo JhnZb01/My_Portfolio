@@ -10,9 +10,9 @@ const Certificates = () => {
       issuer: 'Coursera',
       date: 'December 2023',
       description: 'Learn to create interactive web pages with JavaScript, including DOM manipulation, event handling, and dynamic content creation.',
-      image: '/certificate1/Interactive.jpg',
+      image: './certificate1/Interactive.jpg',
       credentialId: 'COURSERA-JS-INTERACT-2023',
-      url: '/certificate1/Interactive.jpg',
+      url: './certificate1/Interactive.jpg',
       featured: true
     },
     {
@@ -21,9 +21,9 @@ const Certificates = () => {
       issuer: 'Coursera',
       date: 'November 2023',
       description: 'Master responsive web design techniques, CSS frameworks, and mobile-first development principles.',
-      image: '/certificate2/Advance.jpg',
+      image: './certificate2/Advance.jpg',
       credentialId: 'COURSERA-RESPONSIVE-2023',
-      url: '/certificate2/Advance.jpg',
+      url: './certificate2/Advance.jpg',
       featured: true
     },
     {
@@ -32,9 +32,9 @@ const Certificates = () => {
       issuer: 'Coursera',
       date: 'October 2023',
       description: 'Comprehensive capstone project demonstrating mastery of HTML, CSS, JavaScript, and responsive web design.',
-      image: '/certificate3/webdesign.png',
+      image: './certificate3/webdesign.png',
       credentialId: 'COURSERA-CAPSTONE-2023',
-      url: '/certificate3/webdesign.png',
+      url: './certificate3/webdesign.png',
       featured: false
     },
     {
@@ -43,9 +43,9 @@ const Certificates = () => {
       issuer: 'Coursera',
       date: 'September 2023',
       description: 'Fundamental concepts of front-end development including HTML, CSS, and basic JavaScript programming.',
-      image: '/certificate4/frontend.jpg',
+      image: './certificate4/frontend.jpg',
       credentialId: 'COURSERA-FRONTEND-INTRO-2023',
-      url: '/certificate4/frontend.jpg',
+      url: './certificate4/frontend.jpg',
       featured: false
     },
     {
@@ -54,9 +54,9 @@ const Certificates = () => {
       issuer: 'Coursera',
       date: 'August 2023',
       description: 'Comprehensive course covering the three fundamental technologies of web development: HTML, CSS, and JavaScript.',
-      image: '/certificate5/html.jpg',
+      image: './certificate5/html.jpg',
       credentialId: 'COURSERA-HTML-CSS-JS-2023',
-      url: '/certificate5/html.jpg',
+      url: './certificate5/html.jpg',
       featured: false
     },
     {
@@ -65,9 +65,9 @@ const Certificates = () => {
       issuer: 'Coursera',
       date: 'July 2023',
       description: 'Complete specialization covering the fundamentals of web development and coding, from basic HTML to advanced responsive design.',
-      image: '/certificate6/web.jpg',
+      image: './certificate6/web.jpg',
       credentialId: 'COURSERA-SPECIALIZATION-2023',
-      url: '/certificate6/web.jpg',
+      url: './certificate6/web.jpg',
       featured: false
     }
   ]

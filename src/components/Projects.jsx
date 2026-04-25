@@ -18,7 +18,7 @@ const Projects = () => {
       image: groceryImg,
       technologies: ['React', 'JS', 'ReactRouter', 'CSS'],
       category: 'fullstack',
-      liveUrl: '#',
+      liveUrl: 'https://grocery-shop-puce.vercel.app/',
       githubUrl: 'https://github.com/JhnZb01/Grocery_Shop.git',
       featured: true
     },
@@ -29,7 +29,7 @@ const Projects = () => {
       image: aiStoryImg,
       technologies: ['React', 'TypeScript', 'CSS', 'Vite'],
       category: 'frontend',
-      liveUrl: '#',
+      liveUrl: 'https://ai-story-red-nu.vercel.app/',
       githubUrl: 'https://github.com/JhnZb01/AI-STORY.git',
       featured: true
     },
@@ -40,7 +40,7 @@ const Projects = () => {
       image: weatherImg,
       technologies: ['JavaScript', 'API', 'Chart.js', 'CSS3'],
       category: 'frontend',
-      liveUrl: '#',
+      liveUrl: 'https://weather-app-nine-orcin-27.vercel.app/',
       githubUrl: 'https://github.com/JhnZb01/WeatherApp.git',
       featured: false
     },
@@ -51,7 +51,7 @@ const Projects = () => {
       image: socialMediaImg,
       technologies: ['HTML', 'React', 'Tailwindcss', 'Vite'],
       category: 'fullstack',
-      liveUrl: '#',
+      liveUrl: 'https://social-media-dashboardd-iota.vercel.app/',
       githubUrl: 'https://github.com/JhnZb01/Social-Media-Dashboard.git',
       featured: false
     },
@@ -73,7 +73,7 @@ const Projects = () => {
       image: restaurantImg,
       technologies: ['React', 'TailwindCSS', 'Shadcn/UI', 'React Hook Form + Zod'],
       category: 'fullstack',
-      liveUrl: '#',
+      liveUrl: 'https://restaurant-booking-system-eight.vercel.app/',
       githubUrl: 'https://github.com/JhnZb01/Restaurant_Booking_System.git',
       featured: false
     }
@@ -199,6 +199,9 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <motion.a
                       href={project.liveUrl}
+                      onClick={(e) => { if (project.liveUrl === '#') e.preventDefault(); }}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
@@ -207,6 +210,8 @@ const Projects = () => {
                     </motion.a>
                     <motion.a
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300"
@@ -242,6 +247,9 @@ const Projects = () => {
                   <div className="flex space-x-3">
                     <motion.a
                       href={project.liveUrl}
+                      onClick={(e) => { if (project.liveUrl === '#') e.preventDefault(); }}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="flex-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30 flex items-center justify-center space-x-2"
@@ -252,6 +260,8 @@ const Projects = () => {
 
                     <motion.a
                       href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="flex-1 glass text-slate-200 py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 hover:bg-primary-500/10 hover:text-primary-400 flex items-center justify-center space-x-2"
@@ -276,6 +286,7 @@ const Projects = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => window.open('https://github.com/JhnZb01', '_blank')}
             className="btn-primary text-lg px-8 py-4"
           >
             View All Projects

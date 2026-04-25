@@ -83,7 +83,7 @@ const Hero = ({ onSectionChange }) => {
             <div className="relative w-full h-full rounded-full overflow-hidden p-1 bg-gradient-to-tr from-primary-500 to-accent-500 shadow-xl shadow-primary-500/20">
               <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-slate-950">
                 <img
-                  src="/portfolio.png"
+                  src="./portfolio.png"
                   alt="Jahan Zaib"
                   className="w-full h-full object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-500 hover:scale-110"
                 />
@@ -156,7 +156,7 @@ const Hero = ({ onSectionChange }) => {
 
 
           <a
-            href="/MyResume.pdf"
+            href="./MyResume.pdf"
             download="JahanZaib-Resume.pdf"
             style={{ textDecoration: "none" }}
           >

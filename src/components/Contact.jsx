@@ -42,13 +42,13 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       value: '03499857435',
-    
+      link: 'tel:+923499857435'
     },
     {
       icon: MapPin,
       title: 'Location',
       value: 'Peshawar, Islamabad',
-      link: '#'
+      link: 'https://maps.google.com/?q=Peshawar,Islamabad'
     }
   ]
 
@@ -151,6 +151,8 @@ const Contact = () => {
                   <motion.a
                     key={info.title}
                     href={info.link}
+                    target={info.title === 'Location' ? "_blank" : undefined}
+                    rel={info.title === 'Location' ? "noopener noreferrer" : undefined}
                     variants={itemVariants}
                     whileHover={{ scale: 1.02, x: 10 }}
                     className="flex items-center space-x-4 glass rounded-2xl p-6 card-hover group"
