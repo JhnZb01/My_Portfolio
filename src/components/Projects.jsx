@@ -62,9 +62,10 @@ const Projects = () => {
       image: portfolioImg,
       technologies: ['React', 'TailwindCSS', 'Framer Motion', 'Vite'],
       category: 'frontend',
-      liveUrl: '#',
+      liveUrl: 'https://my-portfolio-flax-three-28.vercel.app/',
       githubUrl: 'https://github.com/JhnZb01/My_Portfolio.git',
       featured: false
+
     },
     {
       id: 6,
